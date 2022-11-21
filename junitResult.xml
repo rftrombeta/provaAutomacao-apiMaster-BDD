@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="3.68">
-<testcase classname="Consultar Simulacoes" name="Consultar simulacao nao cadastrada no CPF" time="3.4">
-<system-out><![CDATA[Dado que possua um CPF sem simulacao realizada..............................passed
-Quando enviar a requisicao para consultar o CPF.............................passed
-Entao o endpoint deve retornar o status 404 e a mensagem "CPF numeroCpf não encontrado".passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="3.115">
+<testcase classname="Remover Simulacoes" name="Remover simulacao cadastrada" time="2.803">
+<system-out><![CDATA[Dado que possua um CPF com simulacao realizada..............................passed
+Quando enviar a requisicao para deletar a simulacao.........................passed
+Entao o endpoint deve retornar o status 200.................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -67,4 +67,23 @@ public class Requests {
                 .log().all()
                 .extract();
     }
+
+    /**
+     * Método responsável por realizar a exclusão de simulações.
+     * @param baseUri Base da Url utilizada
+     * @param endpoint EndPoint a ser enviado na requisição
+     * @return retorna o corpo da resposta da solicitação
+     */
+    public static ExtractableResponse methodDeleteSimulacoes(String baseUri, String endpoint) {
+
+        return RestAssured
+            .given()
+                .baseUri(baseUri)
+                .log().all()
+            .when()
+                .delete(endpoint)
+            .then()
+                .log().all()
+                .extract();
+    }
 }
