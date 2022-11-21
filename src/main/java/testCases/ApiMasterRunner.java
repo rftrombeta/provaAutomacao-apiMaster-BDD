@@ -8,7 +8,7 @@ import testCases.utilitarios.BaseTest;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin={"junit:junitResult.xml"},
+        //plugin={"junit:junitResult.xml"},
         features = "src/main/resources/features",
         //tags = "@test",
         monochrome = true,
