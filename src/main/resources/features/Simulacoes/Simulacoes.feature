@@ -3,15 +3,17 @@ Funcionalidade: Simulacoes
 
   @Test
   Cenario: Criar uma simulacao
-    Dado que possuimos um cpf com restricao
-    Quando enviar a requisicao para validacao
-    Entao o endpoint deve retornar o status 200 e a mensagem "O CPF numeroCpf tem problema"
+    Dado que possuimos todas as informacoes necessarias para criar uma simulacao
+    Quando enviar a requisicao para criacao
+    Entao o endpoint deve retornar o status 201
 
+  @Test2
   Cenario: Consultar cpf sem restricao
     Dado que possuimos um cpf sem restricao
     Quando enviar a requisicao para validacao
     Entao o endpoint deve retornar o status 204
 
+  @Test3
   Esquema do Cenario: Cenario Generico para consultar cpfs com e sem restricao e um unico step
     Dado que possuimos o cpf <cpf>
     Quando enviar a requisicao para validacao

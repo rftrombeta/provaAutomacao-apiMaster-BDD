@@ -1,4 +1,4 @@
-package testCases.consultaRestricoes;
+package testCases.steps.consultaRestricoes;
 
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;

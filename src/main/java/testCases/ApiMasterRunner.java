@@ -10,7 +10,7 @@ import testCases.utilitarios.BaseTest;
 @CucumberOptions(
         plugin={"junit:junitResult.xml"},
         features = "src/main/resources/features",
-        //tags = "@test",
+        tags = "@test",
         monochrome = true,
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
