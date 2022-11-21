@@ -1,75 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="12" time="4.254">
-<testcase classname="Restricoes" name="Consultar cpf com restricao" time="3.482">
-<system-out><![CDATA[Dado que possuimos um cpf com restricao.....................................passed
-Quando enviar a requisicao para validacao...................................passed
-Entao o endpoint deve retornar o status 200 e a mensagem "O CPF numeroCpf tem problema".passed
-]]></system-out>
-</testcase>
-<testcase classname="Restricoes" name="Consultar cpf sem restricao" time="0.036">
-<system-out><![CDATA[Dado que possuimos um cpf sem restricao.....................................passed
-Quando enviar a requisicao para validacao...................................passed
-Entao o endpoint deve retornar o status 204.................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step" time="0.035">
-<system-out><![CDATA[Dado que possuimos o cpf "85876554006"......................................passed
-Quando enviar a requisicao para validacao...................................passed
-Entao o endpoint deve retornar o status 204 e a mensagem de restricao caso haja "".passed
-]]></system-out>
-</testcase>
-<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step 2" time="0.026">
-<system-out><![CDATA[Dado que possuimos o cpf "89014514093"......................................passed
-Quando enviar a requisicao para validacao...................................passed
-Entao o endpoint deve retornar o status 204 e a mensagem de restricao caso haja "".passed
-]]></system-out>
-</testcase>
-<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step 3" time="0.022">
-<system-out><![CDATA[Dado que possuimos o cpf "39006340090"......................................passed
-Quando enviar a requisicao para validacao...................................passed
-Entao o endpoint deve retornar o status 204 e a mensagem de restricao caso haja "".passed
-]]></system-out>
-</testcase>
-<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step 4" time="0.041">
-<system-out><![CDATA[Dado que possuimos o cpf "97093236014"......................................passed
-Quando enviar a requisicao para validacao...................................passed
-Entao o endpoint deve retornar o status 200 e a mensagem de restricao caso haja "O CPF numeroCpf tem problema".passed
-]]></system-out>
-</testcase>
-<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step 5" time="0.053">
-<system-out><![CDATA[Dado que possuimos o cpf "97093236014"......................................passed
-Quando enviar a requisicao para validacao...................................passed
-Entao o endpoint deve retornar o status 200 e a mensagem de restricao caso haja "O CPF numeroCpf tem problema".passed
-]]></system-out>
-</testcase>
-<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step 6" time="0.095">
-<system-out><![CDATA[Dado que possuimos o cpf "97093236014"......................................passed
-Quando enviar a requisicao para validacao...................................passed
-Entao o endpoint deve retornar o status 200 e a mensagem de restricao caso haja "O CPF numeroCpf tem problema".passed
-]]></system-out>
-</testcase>
-<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step 7" time="0.041">
-<system-out><![CDATA[Dado que possuimos o cpf "97093236014"......................................passed
-Quando enviar a requisicao para validacao...................................passed
-Entao o endpoint deve retornar o status 200 e a mensagem de restricao caso haja "O CPF numeroCpf tem problema".passed
-]]></system-out>
-</testcase>
-<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step 8" time="0.051">
-<system-out><![CDATA[Dado que possuimos o cpf "97093236014"......................................passed
-Quando enviar a requisicao para validacao...................................passed
-Entao o endpoint deve retornar o status 200 e a mensagem de restricao caso haja "O CPF numeroCpf tem problema".passed
-]]></system-out>
-</testcase>
-<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step 9" time="0.05">
-<system-out><![CDATA[Dado que possuimos o cpf "97093236014"......................................passed
-Quando enviar a requisicao para validacao...................................passed
-Entao o endpoint deve retornar o status 200 e a mensagem de restricao caso haja "O CPF numeroCpf tem problema".passed
-]]></system-out>
-</testcase>
-<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step 10" time="0.048">
-<system-out><![CDATA[Dado que possuimos o cpf "97093236014"......................................passed
-Quando enviar a requisicao para validacao...................................passed
-Entao o endpoint deve retornar o status 200 e a mensagem de restricao caso haja "O CPF numeroCpf tem problema".passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="3.68">
+<testcase classname="Consultar Simulacoes" name="Consultar simulacao nao cadastrada no CPF" time="3.4">
+<system-out><![CDATA[Dado que possua um CPF sem simulacao realizada..............................passed
+Quando enviar a requisicao para consultar o CPF.............................passed
+Entao o endpoint deve retornar o status 404 e a mensagem "CPF numeroCpf não encontrado".passed
 ]]></system-out>
 </testcase>
 </testsuite>

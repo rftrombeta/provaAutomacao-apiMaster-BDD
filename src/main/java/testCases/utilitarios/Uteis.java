@@ -1,13 +1,17 @@
 package testCases.utilitarios;
 
+import org.apache.commons.lang3.RandomStringUtils;
+
 import java.util.Random;
 
 public class Uteis {
 
+    static Random random = new Random();
+
     public static String selecionaCpfComRestricaoAleatorio() {
 
-        Random rn = new Random();
-        Integer valor = rn.nextInt(10) + 1;
+
+        Integer valor = random.nextInt(10) + 1;
 
         if (valor == 1) return RegistrosComRestricao.cpf1;
         if (valor == 2) return RegistrosComRestricao.cpf2;
@@ -60,5 +64,33 @@ public class Uteis {
 
     private static int mod(int dividendo, int divisor) {
         return (int) Math.round(dividendo - (Math.floor(dividendo / divisor) * divisor));
+    }
+
+    public static String geraNomes() {
+
+        String[] nomes = {"Rodrigo", "Fernando", "Ana Carla", "Manuela", "Isabella"};
+        String[] sobreNomes = {"Trombeta", "Silva", "Souza", "Fernandes", "Almeida"};
+
+        return nomes[random.nextInt(4) + 1] + " " + sobreNomes[random.nextInt(4) + 1];
+    }
+
+    public static String geraEmail() {
+
+        byte[] array = new byte[7];
+        new Random().nextBytes(array);
+
+        String email = RandomStringUtils.randomAlphabetic(10);
+
+        return email+"@gmail.com";
+    }
+
+    public static Integer geraValor() {
+
+        return random.nextInt((40000 - 1000) + 1) + 1000;
+    }
+
+    public static Integer geraParcelas() {
+
+        return random.nextInt((48 - 2) + 1) + 48;
     }
 }

@@ -22,6 +22,5 @@ public class ApiMasterRunner extends BaseTest {
 
         basePath = "http://localhost:8080";
         endPoint = null;
-        cpf = null;
     }
 }
