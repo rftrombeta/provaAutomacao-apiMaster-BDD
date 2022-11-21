@@ -10,7 +10,6 @@ public class DeletarSimualacoesStepDefinition extends BaseTest {
     @Quando("enviar a requisicao para deletar a simulacao")
     public void enviarARequisicaoParaDeletarASimulacao() {
 
-        String id = "/12";
-        extractableResponse = Requests.methodDeleteSimulacoes(basePath, TiposDeServico.endPointCriarSimulacao + id);
+        extractableResponse = Requests.methodDeleteSimulacoes(basePath, TiposDeServico.endPointCriarSimulacao + "/" + id);
     }
 }

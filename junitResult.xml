@@ -1,6 +1,119 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="3.115">
-<testcase classname="Remover Simulacoes" name="Remover simulacao cadastrada" time="2.803">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="20" time="5.93">
+<testcase classname="Alterar Simulacoes" name="Alterar simulacao cadastrada" time="4.114">
+<system-out><![CDATA[Dado que possua um CPF com simulacao realizada..............................passed
+Quando enviar a requisicao para alterar a simulacao.........................passed
+Entao o endpoint deve retornar o status 200.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Restricoes" name="Consultar cpf com restricao" time="0.134">
+<system-out><![CDATA[Dado que possuimos um cpf com restricao.....................................passed
+Quando enviar a requisicao para validacao...................................passed
+Entao o endpoint deve retornar o status 200 e a mensagem "O CPF numeroCpf tem problema".passed
+]]></system-out>
+</testcase>
+<testcase classname="Restricoes" name="Consultar cpf sem restricao" time="0.041">
+<system-out><![CDATA[Dado que possuimos um cpf sem restricao.....................................passed
+Quando enviar a requisicao para validacao...................................passed
+Entao o endpoint deve retornar o status 204.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step" time="0.05">
+<system-out><![CDATA[Dado que possuimos o cpf "85876554006"......................................passed
+Quando enviar a requisicao para validacao...................................passed
+Entao o endpoint deve retornar o status 204 e a mensagem de restricao caso haja "".passed
+]]></system-out>
+</testcase>
+<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step 2" time="0.038">
+<system-out><![CDATA[Dado que possuimos o cpf "89014514093"......................................passed
+Quando enviar a requisicao para validacao...................................passed
+Entao o endpoint deve retornar o status 204 e a mensagem de restricao caso haja "".passed
+]]></system-out>
+</testcase>
+<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step 3" time="0.039">
+<system-out><![CDATA[Dado que possuimos o cpf "39006340090"......................................passed
+Quando enviar a requisicao para validacao...................................passed
+Entao o endpoint deve retornar o status 204 e a mensagem de restricao caso haja "".passed
+]]></system-out>
+</testcase>
+<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step 4" time="0.063">
+<system-out><![CDATA[Dado que possuimos o cpf "97093236014"......................................passed
+Quando enviar a requisicao para validacao...................................passed
+Entao o endpoint deve retornar o status 200 e a mensagem de restricao caso haja "O CPF numeroCpf tem problema".passed
+]]></system-out>
+</testcase>
+<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step 5" time="0.072">
+<system-out><![CDATA[Dado que possuimos o cpf "97093236014"......................................passed
+Quando enviar a requisicao para validacao...................................passed
+Entao o endpoint deve retornar o status 200 e a mensagem de restricao caso haja "O CPF numeroCpf tem problema".passed
+]]></system-out>
+</testcase>
+<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step 6" time="0.056">
+<system-out><![CDATA[Dado que possuimos o cpf "97093236014"......................................passed
+Quando enviar a requisicao para validacao...................................passed
+Entao o endpoint deve retornar o status 200 e a mensagem de restricao caso haja "O CPF numeroCpf tem problema".passed
+]]></system-out>
+</testcase>
+<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step 7" time="0.047">
+<system-out><![CDATA[Dado que possuimos o cpf "97093236014"......................................passed
+Quando enviar a requisicao para validacao...................................passed
+Entao o endpoint deve retornar o status 200 e a mensagem de restricao caso haja "O CPF numeroCpf tem problema".passed
+]]></system-out>
+</testcase>
+<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step 8" time="0.051">
+<system-out><![CDATA[Dado que possuimos o cpf "97093236014"......................................passed
+Quando enviar a requisicao para validacao...................................passed
+Entao o endpoint deve retornar o status 200 e a mensagem de restricao caso haja "O CPF numeroCpf tem problema".passed
+]]></system-out>
+</testcase>
+<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step 9" time="0.052">
+<system-out><![CDATA[Dado que possuimos o cpf "97093236014"......................................passed
+Quando enviar a requisicao para validacao...................................passed
+Entao o endpoint deve retornar o status 200 e a mensagem de restricao caso haja "O CPF numeroCpf tem problema".passed
+]]></system-out>
+</testcase>
+<testcase classname="Restricoes" name="Cenario Generico para consultar cpfs com e sem restricao e um unico step 10" time="0.054">
+<system-out><![CDATA[Dado que possuimos o cpf "97093236014"......................................passed
+Quando enviar a requisicao para validacao...................................passed
+Entao o endpoint deve retornar o status 200 e a mensagem de restricao caso haja "O CPF numeroCpf tem problema".passed
+]]></system-out>
+</testcase>
+<testcase classname="Consultar Simulacoes" name="Consultar simulacoes cadastradas" time="0.113">
+<system-out><![CDATA[Quando enviar a requisicao para consultar...................................passed
+Entao o endpoint deve retornar o statusCode 200 e uma lista com as simulacoes cadastradas.passed
+]]></system-out>
+</testcase>
+<testcase classname="Consultar Simulacoes" name="Consultar CPF com simulacao cadastrada" time="0.14">
+<system-out><![CDATA[Dado que possua um CPF com simulacao realizada..............................passed
+Quando enviar a requisicao para consultar o CPF.............................passed
+Entao o endpoint deve retornar o statusCode 200 e as informacoes da simulacao.passed
+]]></system-out>
+</testcase>
+<testcase classname="Consultar Simulacoes" name="Consultar CPF sem simulacao cadastrada" time="0.051">
+<system-out><![CDATA[Dado que possua um CPF sem simulacao realizada..............................passed
+Quando enviar a requisicao para consultar o CPF.............................passed
+Entao o endpoint deve retornar o status 404 e a mensagem "CPF numeroCpf não encontrado".passed
+]]></system-out>
+</testcase>
+<testcase classname="Criar Simulacoes" name="Criar uma simulacao" time="0.036">
+<system-out><![CDATA[Dado que possuimos todas as informacoes necessarias para criar uma simulacao.passed
+Quando enviar a requisicao para criacao.....................................passed
+Entao o endpoint deve retornar o statusCode 201.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Criar Simulacoes" name="Validar uma simulacao com cpf duplicado" time="0.088">
+<system-out><![CDATA[Dado que possuimos um body com um cpf já utilizado para criar uma simulacao.passed
+Quando enviar a requisicao para criacao.....................................passed
+Entao o endpoint deve retornar o statusCode 400 e a mensagem "CPF duplicado".passed
+]]></system-out>
+</testcase>
+<testcase classname="Criar Simulacoes" name="Validar uma simulacao incorreta" time="0.05">
+<system-out><![CDATA[Dado que possuimos um body com informacoes invalidas para criar uma simulacao.passed
+Quando enviar a requisicao para criacao.....................................passed
+Entao o endpoint deve retornar o statusCode 400 e uma lista com os erros encontrados.passed
+]]></system-out>
+</testcase>
+<testcase classname="Remover Simulacoes" name="Remover simulacao cadastrada" time="0.104">
 <system-out><![CDATA[Dado que possua um CPF com simulacao realizada..............................passed
 Quando enviar a requisicao para deletar a simulacao.........................passed
 Entao o endpoint deve retornar o status 200.................................passed

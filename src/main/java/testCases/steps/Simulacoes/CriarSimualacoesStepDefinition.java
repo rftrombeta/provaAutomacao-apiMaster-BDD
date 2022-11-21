@@ -33,9 +33,8 @@ public class CriarSimualacoesStepDefinition extends BaseTest {
     @Dado("que possuimos um body com um cpf já utilizado para criar uma simulacao")
     public void quePossuimosUmBodyComUmCpfJáUtilizadoParaCriarUmaSimulacao() {
 
-        extractableResponse = Requests.methodGetConsultarSimulacoesCadastradas(basePath, TiposDeServico.endPointCriarSimulacao);
         simulacaoModel = criarSimulacaoFactory.builCriarSimulacaoModel();
-        simulacaoModel.setCpf(extractableResponse.body().jsonPath().get("cpf"));
+        Requests.methodPostCriarSimulacao(simulacaoModel, basePath + TiposDeServico.endPointCriarSimulacao);
     }
 
     @Dado("que possuimos um body com informacoes invalidas para criar uma simulacao")

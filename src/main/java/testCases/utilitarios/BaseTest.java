@@ -10,6 +10,7 @@ public class BaseTest {
     public static String basePath;
     public static String endPoint;
     public static String cpf;
+    public static Integer id;
     public static ExtractableResponse extractableResponse;
     public static Response response;
     public static SimulacaoModel simulacaoModel = new SimulacaoModel();

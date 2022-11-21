@@ -25,7 +25,10 @@ public class ConsultarSimualacoesStepDefinition extends BaseTest {
     @Dado("que possua um CPF com simulacao realizada")
     public void quePossuaUmCPFComSimulacaoRealizada() {
 
-        cpf = "75868840054";
+        simulacaoModel = criarSimulacaoFactory.builCriarSimulacaoModel();
+        response = Requests.methodPostCriarSimulacao(simulacaoModel, basePath + TiposDeServico.endPointCriarSimulacao);
+        cpf = response.then().extract().body().jsonPath().get("cpf");
+        id = response.then().extract().body().jsonPath().get("id");
     }
 
     @Dado("que possua um CPF sem simulacao realizada")
